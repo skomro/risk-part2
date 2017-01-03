@@ -108,20 +108,20 @@ public class riskGUI extends JFrame {
 	public riskGUI() {
 		GraphicsEnvironment ge = GraphicsEnvironment
 				.getLocalGraphicsEnvironment();
-//		try {
-//			gotFontHeader = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("./otherSources/TrajanusBricks.ttf"));
-//					//"otherSources/TrajanusBricks.ttf"));
-//			gotFontHeader = gotFontHeader.deriveFont(36f);
-//			gotFontBody = Font.createFont(Font.TRUETYPE_FONT, new File("./otherSources/LibreBaskerville-Regular.otf"));
-//			gotFontBody = gotFontBody.deriveFont(24f);
-//		} catch (FontFormatException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//
-//		ge.registerFont(gotFontHeader);
-//		ge.registerFont(gotFontBody);
+		try {
+			gotFontHeader = Font.createFont(Font.TRUETYPE_FONT, this.getClass().getResourceAsStream("otherSources/TrajanusBricks.ttf"));//new File("otherSources/TrajanusBricks.ttf"));
+					//"otherSources/TrajanusBricks.ttf"));
+			gotFontHeader = gotFontHeader.deriveFont(36f);
+			gotFontBody = Font.createFont(Font.TRUETYPE_FONT, this.getClass().getResourceAsStream("otherSources/LibreBaskerville-Regular.otf"));//new File("otherSources/LibreBaskerville-Regular.otf"));
+			gotFontBody = gotFontBody.deriveFont(24f);
+		} catch (FontFormatException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		ge.registerFont(gotFontHeader);
+		ge.registerFont(gotFontBody);
 
 		// Making Borders
 		// Creating border types to make the GUI prettier
